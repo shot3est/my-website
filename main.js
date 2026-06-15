@@ -129,6 +129,7 @@ if (lightbox) {
 }
 
 /* ── Contact form ── */
+const FORMSPREE_ID = 'REPLACE_WITH_YOUR_FORMSPREE_ID';
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
   const validate = field => {
@@ -146,18 +147,35 @@ if (contactForm) {
       if (f.closest('.form-group')?.classList.contains('error')) validate(f);
     });
   });
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
     let allOk = true;
     contactForm.querySelectorAll('[required]').forEach(f => { if (!validate(f)) allOk = false; });
     if (!allOk) return;
+
     const btn = contactForm.querySelector('[type="submit"]');
-    btn.textContent = 'Sending…';
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span data-lang="en">Sending…</span><span data-lang="ja" hidden>送信中…</span>';
     btn.disabled = true;
-    setTimeout(() => {
-      contactForm.style.display = 'none';
-      document.querySelector('.form-success')?.classList.add('show');
-    }, 1200);
+    applyLang(currentLang);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        contactForm.style.display = 'none';
+        document.querySelector('.form-success')?.classList.add('show');
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      btn.innerHTML = '<span data-lang="en">Failed — please try again</span><span data-lang="ja" hidden>送信失敗 — もう一度お試しください</span>';
+      btn.disabled = false;
+      applyLang(currentLang);
+    }
   });
 }
 
