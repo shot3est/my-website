@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Booking — HIKARI Photography</title>
-  <meta name="description" content="Book a professional photography session in Japan with Yuki Tanaka. Available in Tokyo, Kyoto, Osaka, Nara, and Hakone.">
+  <title>Contact &amp; Booking — MEIAN Photography</title>
+  <meta name="description" content="Book a professional photography session in Tokyo with Yuki Tanaka. Available in Asakusa, Shibuya, Shinjuku, Harajuku and Ueno.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,17 +13,26 @@
   <nav class="navbar scrolled">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-kanji">光</span>
+        <span class="logo-kanji">明暗</span>
         <div class="logo-text">
-          <span class="logo-en">HIKARI</span>
-          <span class="logo-tagline">Photography · Japan</span>
+          <span class="logo-en">MEIAN</span>
+          <span class="logo-tagline">Photography · Tokyo</span>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+        <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a></li>
+        <li><a href="about.html"><span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a></li>
+        <li><a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a></li>
+        <li>
+          <button class="lang-btn" onclick="toggleLang()">
+            <span data-lang="en">日本語</span>
+            <span data-lang="ja" hidden>English</span>
+          </button>
+        </li>
+        <li><a href="contact.html" class="nav-cta">
+          <span data-lang="en">Book a Session</span>
+          <span data-lang="ja" hidden>撮影を予約する</span>
+        </a></li>
       </ul>
       <button class="nav-burger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -31,22 +40,28 @@
     </div>
   </nav>
 
-  <!-- Mobile nav -->
   <nav class="nav-mobile">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Book a Session</a>
+    <a href="index.html"><span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a>
+    <a href="about.html"><span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a>
+    <a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a>
+    <a href="contact.html"><span data-lang="en">Book a Session</span><span data-lang="ja" hidden>撮影を予約する</span></a>
+    <a href="#" onclick="toggleLang(); return false;" style="color:var(--gold-l);">
+      <span data-lang="en">🌐 日本語に切り替える</span>
+      <span data-lang="ja" hidden>🌐 Switch to English</span>
+    </a>
   </nav>
 
   <!-- ══ PAGE HERO ══ -->
   <section class="page-hero" style="margin-top:var(--nav-h);">
     <div class="page-hero-bg ph-asakusa" style="opacity:.4;"></div>
     <div class="page-hero-content">
-      <p class="page-hero-label">Get in touch</p>
+      <p class="page-hero-label">
+        <span data-lang="en">Get in touch</span>
+        <span data-lang="ja" hidden>お問い合わせ</span>
+      </p>
       <h1 class="page-hero-title">
-        Book a Session
-        <small>撮影のご予約</small>
+        <span data-lang="en">Book a Session<small>撮影のご予約</small></span>
+        <span data-lang="ja" hidden>撮影のご予約<small>Book a Session</small></span>
       </h1>
     </div>
   </section>
@@ -54,64 +69,84 @@
   <!-- ══ CONTACT ══ -->
   <section class="section">
     <div class="container">
-
       <div class="contact-layout">
 
         <!-- ── Left: Info ── -->
         <div class="contact-info-block fade-up">
-          <div class="section-label">Let's Connect</div>
-          <h2>Plan Your Perfect<br>Photo Session</h2>
+          <div class="section-label">
+            <span data-lang="en">Let's Connect</span>
+            <span data-lang="ja" hidden>ご連絡はこちら</span>
+          </div>
+          <h2>
+            <span data-lang="en">Plan Your Perfect<br>Tokyo Photo Session</span>
+            <span data-lang="ja" hidden>東京での撮影を<br>一緒に計画しましょう</span>
+          </h2>
           <span class="jp-sub">ご予約・お問い合わせ</span>
-          <p>
-            Fill in the form with your travel dates, preferred location, and what kind
-            of shoot you have in mind. I'll get back to you within <strong>24 hours</strong>
-            to confirm availability and answer any questions.
+
+          <p data-lang="en">
+            Fill in the form with your travel dates, preferred Tokyo location, and
+            what kind of shoot you have in mind. I'll get back to you within
+            <strong>24 hours</strong> to confirm availability and answer any questions.
+          </p>
+          <p data-lang="ja" hidden>
+            旅行日程、希望の撮影スポット、撮影のイメージをフォームに入力してください。
+            空き状況の確認とご質問への回答を<strong>24時間以内</strong>にお送りします。
           </p>
 
           <div class="contact-details">
             <div class="contact-detail">
               <div class="detail-icon">✉</div>
               <div>
-                <div class="detail-label">Email</div>
-                <div class="detail-value">yuki@hikari-photo.jp</div>
+                <div class="detail-label"><span data-lang="en">Email</span><span data-lang="ja" hidden>メール</span></div>
+                <div class="detail-value">yuki@meian-photo.jp</div>
               </div>
             </div>
             <div class="contact-detail">
               <div class="detail-icon">📱</div>
               <div>
-                <div class="detail-label">LINE (preferred for quick chat)</div>
-                <div class="detail-value">hikari_photo</div>
+                <div class="detail-label"><span data-lang="en">LINE (preferred for quick chat)</span><span data-lang="ja" hidden>LINE（素早いやり取りに）</span></div>
+                <div class="detail-value">meian_photo</div>
               </div>
             </div>
             <div class="contact-detail">
               <div class="detail-icon">📷</div>
               <div>
                 <div class="detail-label">Instagram</div>
-                <div class="detail-value">@hikari_photo_jp</div>
+                <div class="detail-value">@meian_photo_jp</div>
               </div>
             </div>
             <div class="contact-detail">
               <div class="detail-icon">📍</div>
               <div>
-                <div class="detail-label">Base Location</div>
-                <div class="detail-value">Tokyo &amp; Kyoto, Japan</div>
+                <div class="detail-label"><span data-lang="en">Base Location</span><span data-lang="ja" hidden>拠点</span></div>
+                <div class="detail-value">Tokyo, Japan</div>
               </div>
             </div>
           </div>
 
           <div style="margin-top:36px;padding:20px 24px;background:var(--bg-section);border-left:3px solid var(--gold);">
-            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;">
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;" data-lang="en">
               <strong style="color:var(--text);">🕐 Response time:</strong><br>
               I reply within 24 hours on weekdays. For same-week bookings,
               please contact me via LINE for a faster response.
             </p>
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;" data-lang="ja" hidden>
+              <strong style="color:var(--text);">🕐 返信について：</strong><br>
+              平日24時間以内にご返信します。同週内のご予約は、
+              LINEでのご連絡が最も速くお返事できます。
+            </p>
           </div>
 
           <div style="margin-top:24px;padding:20px 24px;background:var(--bg-section);border-left:3px solid var(--matcha);">
-            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;">
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;" data-lang="en">
               <strong style="color:var(--text);">💳 Payment:</strong><br>
-              50% deposit at booking, remainder on the day of the session.
-              Accepted: PayPal, credit card, bank transfer, PayPay.
+              50% deposit at booking, remainder on the day. Accepted: PayPal,
+              credit card, bank transfer, PayPay.
+            </p>
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;" data-lang="ja" hidden>
+              <strong style="color:var(--text);">💳 お支払いについて：</strong><br>
+              ご予約時に50%のデポジット、残額は撮影当日にお支払いください。
+              PayPal・クレジットカード・銀行振込・PayPayに対応。
             </p>
           </div>
         </div>
@@ -120,85 +155,151 @@
         <div class="fade-up delay-2">
           <div class="contact-form">
             <div style="margin-bottom:28px;">
-              <h3 style="font-family:var(--ff-head);font-size:1.5rem;margin-bottom:4px;">Booking Request</h3>
-              <p style="font-size:.82rem;color:var(--text-mid);">All fields marked <span style="color:var(--accent);">*</span> are required.</p>
+              <h3 style="font-family:var(--ff-head);font-size:1.5rem;margin-bottom:4px;">
+                <span data-lang="en">Booking Request</span>
+                <span data-lang="ja" hidden>撮影予約フォーム</span>
+              </h3>
+              <p style="font-size:.82rem;color:var(--text-mid);">
+                <span data-lang="en">All fields marked <span style="color:var(--accent);">*</span> are required.</span>
+                <span data-lang="ja" hidden><span style="color:var(--accent);">*</span> の付いた項目は必須です。</span>
+              </p>
             </div>
 
             <form id="contact-form" novalidate>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="fname">First Name <span>*</span></label>
+                  <label for="fname">
+                    <span data-lang="en">First Name <span style="color:var(--accent);">*</span></span>
+                    <span data-lang="ja" hidden>名前（名）<span style="color:var(--accent);">*</span></span>
+                  </label>
                   <input type="text" id="fname" name="fname" placeholder="Emma" required>
-                  <span class="field-error">Please enter your first name.</span>
+                  <span class="field-error">
+                    <span data-lang="en">Please enter your first name.</span>
+                    <span data-lang="ja" hidden>名前（名）を入力してください。</span>
+                  </span>
                 </div>
                 <div class="form-group">
-                  <label for="lname">Last Name <span>*</span></label>
+                  <label for="lname">
+                    <span data-lang="en">Last Name <span style="color:var(--accent);">*</span></span>
+                    <span data-lang="ja" hidden>名前（姓）<span style="color:var(--accent);">*</span></span>
+                  </label>
                   <input type="text" id="lname" name="lname" placeholder="Wilson" required>
-                  <span class="field-error">Please enter your last name.</span>
+                  <span class="field-error">
+                    <span data-lang="en">Please enter your last name.</span>
+                    <span data-lang="ja" hidden>名前（姓）を入力してください。</span>
+                  </span>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email">Email Address <span>*</span></label>
+                <label for="email">
+                  <span data-lang="en">Email Address <span style="color:var(--accent);">*</span></span>
+                  <span data-lang="ja" hidden>メールアドレス <span style="color:var(--accent);">*</span></span>
+                </label>
                 <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                <span class="field-error">Please enter a valid email address.</span>
+                <span class="field-error">
+                  <span data-lang="en">Please enter a valid email address.</span>
+                  <span data-lang="ja" hidden>有効なメールアドレスを入力してください。</span>
+                </span>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="date">Preferred Date <span>*</span></label>
+                  <label for="date">
+                    <span data-lang="en">Preferred Date <span style="color:var(--accent);">*</span></span>
+                    <span data-lang="ja" hidden>ご希望日 <span style="color:var(--accent);">*</span></span>
+                  </label>
                   <input type="date" id="date" name="date" required>
-                  <span class="field-error">Please select a date.</span>
+                  <span class="field-error">
+                    <span data-lang="en">Please select a date.</span>
+                    <span data-lang="ja" hidden>日付を選択してください。</span>
+                  </span>
                 </div>
                 <div class="form-group">
-                  <label for="package">Package</label>
+                  <label for="package">
+                    <span data-lang="en">Package</span>
+                    <span data-lang="ja" hidden>プラン</span>
+                  </label>
                   <select id="package" name="package">
-                    <option value="">— Select a package —</option>
-                    <option value="solo">Solo Portrait (2h · ¥18,000)</option>
-                    <option value="couple">Couples &amp; Friends (3h · ¥28,000)</option>
-                    <option value="fullday">Full Day Journey (6h · ¥58,000)</option>
-                    <option value="custom">Custom — let's discuss</option>
+                    <option value="" data-lang="en">— Select a package —</option>
+                    <option value="" data-lang="ja" hidden>— プランを選択 —</option>
+                    <option value="solo">
+                      <span data-lang="en">Solo Portrait (2h · ¥16,000)</span>
+                      <span data-lang="ja" hidden>ひとり旅撮影（2時間・¥16,000）</span>
+                    </option>
+                    <option value="couple">
+                      <span data-lang="en">Couples &amp; Friends (3h · ¥26,000)</span>
+                      <span data-lang="ja" hidden>ふたり・友人撮影（3時間・¥26,000）</span>
+                    </option>
+                    <option value="fullday">
+                      <span data-lang="en">Full Day Journey (6h · ¥56,000)</span>
+                      <span data-lang="ja" hidden>一日撮影プラン（6時間・¥56,000）</span>
+                    </option>
+                    <option value="custom">
+                      <span data-lang="en">Custom — let's discuss</span>
+                      <span data-lang="ja" hidden>カスタム — 要相談</span>
+                    </option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="location">Desired Location(s)</label>
-                <input type="text" id="location" name="location" placeholder="e.g. Fushimi Inari, Arashiyama, Gion — Kyoto">
+                <label for="location">
+                  <span data-lang="en">Desired Location(s) in Tokyo</span>
+                  <span data-lang="ja" hidden>希望の撮影スポット（東京内）</span>
+                </label>
+                <input type="text" id="location" name="location"
+                  data-placeholder-en="e.g. Asakusa, Shibuya Scramble, Shinjuku Gyoen"
+                  data-placeholder-ja="例：浅草寺、渋谷スクランブル、新宿御苑">
               </div>
 
               <div class="form-group">
-                <label for="group">Group Size</label>
+                <label for="group">
+                  <span data-lang="en">Group Size</span>
+                  <span data-lang="ja" hidden>人数</span>
+                </label>
                 <select id="group" name="group">
-                  <option value="">— Select —</option>
-                  <option value="1">1 person (solo)</option>
-                  <option value="2">2 people</option>
-                  <option value="3-4">3–4 people</option>
-                  <option value="5+">5 or more</option>
+                  <option value="" data-lang="en">— Select —</option>
+                  <option value="" data-lang="ja" hidden>— 選択 —</option>
+                  <option value="1">1<span data-lang="en"> person (solo)</span><span data-lang="ja" hidden>人（ひとり）</span></option>
+                  <option value="2">2<span data-lang="en"> people</span><span data-lang="ja" hidden>人</span></option>
+                  <option value="3-4">3–4<span data-lang="en"> people</span><span data-lang="ja" hidden>人</span></option>
+                  <option value="5+">5<span data-lang="en"> or more</span><span data-lang="ja" hidden>人以上</span></option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="message">Tell me about your vision <span>*</span></label>
+                <label for="message">
+                  <span data-lang="en">Tell me about your vision <span style="color:var(--accent);">*</span></span>
+                  <span data-lang="ja" hidden>撮影のご要望・イメージ <span style="color:var(--accent);">*</span></span>
+                </label>
                 <textarea id="message" name="message" rows="5"
-                  placeholder="What kind of photos are you hoping for? Any special requests — kimono, sunrise sessions, specific spots? Let me know!" required></textarea>
-                <span class="field-error">Please write a short message.</span>
+                  data-placeholder-en="What kind of photos are you hoping for? Any special requests — kimono, sunrise sessions, specific spots in Tokyo?"
+                  data-placeholder-ja="どんな写真を希望されますか？着物・日の出撮影・特定の東京スポットなど、ご要望をお気軽にどうぞ！"
+                  required></textarea>
+                <span class="field-error">
+                  <span data-lang="en">Please write a short message.</span>
+                  <span data-lang="ja" hidden>メッセージを入力してください。</span>
+                </span>
               </div>
 
               <div class="form-check">
                 <input type="checkbox" id="policy" name="policy">
                 <label for="policy">
-                  I agree that my data will be used to respond to my enquiry and to plan my photography session. I can unsubscribe or request deletion at any time.
+                  <span data-lang="en">I agree that my data will be used to respond to my enquiry and plan my photography session.</span>
+                  <span data-lang="ja" hidden>入力した情報は、お問い合わせへの返信および撮影の調整のみに使用することに同意します。</span>
                 </label>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
-                Send Booking Request →
+                <span data-lang="en">Send Booking Request →</span>
+                <span data-lang="ja" hidden>予約リクエストを送る →</span>
               </button>
 
               <p class="form-note">
-                📷 You'll receive a confirmation email within 24 hours.
+                <span data-lang="en">📷 You'll receive a confirmation email within 24 hours.</span>
+                <span data-lang="ja" hidden>📷 24時間以内に確認メールをお送りします。</span>
               </p>
 
             </form>
@@ -206,21 +307,31 @@
             <!-- Success state -->
             <div class="form-success">
               <div class="success-icon">✨</div>
-              <h3 class="success-title">Message Sent!</h3>
+              <h3 class="success-title">
+                <span data-lang="en">Message Sent!</span>
+                <span data-lang="ja" hidden>送信完了！</span>
+              </h3>
               <p class="success-jp">ありがとうございます</p>
-              <p class="success-text">
+              <p class="success-text" data-lang="en">
                 Thank you for reaching out! I'll review your request and reply within
-                <strong>24 hours</strong>. I can't wait to capture your Japan memories.
+                <strong>24 hours</strong>. I can't wait to capture your Tokyo memories.
+              </p>
+              <p class="success-text" data-lang="ja" hidden>
+                お問い合わせありがとうございます！内容を確認し、<strong>24時間以内</strong>にご返信します。
+                あなたの東京の思い出を一緒に残しましょう。
               </p>
               <div style="margin-top:28px;">
-                <a href="gallery.html" class="btn btn-dark">Browse Gallery While You Wait</a>
+                <a href="gallery.html" class="btn btn-dark">
+                  <span data-lang="en">Browse Gallery While You Wait</span>
+                  <span data-lang="ja" hidden>ギャラリーを見て待つ</span>
+                </a>
               </div>
             </div>
 
-          </div><!-- /contact-form -->
-        </div><!-- /right -->
+          </div>
+        </div>
 
-      </div><!-- /contact-layout -->
+      </div>
     </div>
   </section>
 
@@ -228,69 +339,60 @@
   <section class="section section-mid">
     <div class="container" style="max-width:820px;">
       <div class="text-center fade-up">
-        <div class="section-label">Before You Book</div>
-        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <div class="section-label">
+          <span data-lang="en">Before You Book</span>
+          <span data-lang="ja" hidden>よくあるご質問</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Frequently Asked <span>Questions</span></span>
+          <span data-lang="ja" hidden><span>FAQ</span></span>
+        </h2>
       </div>
 
-      <div style="margin-top:48px;display:flex;flex-direction:column;gap:0;">
+      <div style="margin-top:48px;">
 
         <details class="faq-item fade-up delay-1" open>
-          <summary>How far in advance should I book?</summary>
-          <p>
-            I recommend booking at least <strong>3–5 days</strong> in advance to ensure availability,
-            especially during peak seasons (cherry blossoms in March–April, autumn foliage in
-            November). Last-minute bookings are sometimes possible — contact me via LINE for the
-            fastest response.
-          </p>
+          <summary>
+            <span data-lang="en">How far in advance should I book?</span>
+            <span data-lang="ja" hidden>どのくらい前に予約すればよいですか？</span>
+          </summary>
+          <p data-lang="en">I recommend booking at least <strong>3–5 days</strong> in advance, especially during peak seasons (cherry blossoms March–April, autumn foliage November). Last-minute bookings are sometimes possible — contact me via LINE.</p>
+          <p data-lang="ja" hidden>少なくとも<strong>3〜5日前</strong>のご予約をおすすめします。特に繁忙期（桜シーズン3〜4月、紅葉シーズン11月）は早めのご予約を。直前のご予約はLINEにてお問い合わせください。</p>
         </details>
 
         <details class="faq-item fade-up delay-2">
-          <summary>What if the weather is bad?</summary>
-          <p>
-            Japan weather can be unpredictable! Light rain can actually create beautiful, moody
-            shots. However, if conditions are unsafe or you prefer to reschedule, I offer free
-            date changes with at least <strong>24 hours notice</strong>.
-          </p>
+          <summary>
+            <span data-lang="en">What if the weather is bad?</span>
+            <span data-lang="ja" hidden>天気が悪い場合はどうなりますか？</span>
+          </summary>
+          <p data-lang="en">Light rain can create beautiful, moody shots of Tokyo! However, if conditions are unsafe or you prefer to reschedule, I offer free date changes with at least <strong>24 hours notice</strong>.</p>
+          <p data-lang="ja" hidden>小雨は東京の写真に情緒ある雰囲気をもたらします！ただし、天候が悪化した場合や日程変更をご希望の場合は、<strong>24時間前まで</strong>にご連絡いただければ無料で対応します。</p>
         </details>
 
         <details class="faq-item fade-up delay-3">
-          <summary>Do you provide props, costumes, or kimono?</summary>
-          <p>
-            I can connect you with trusted kimono rental shops in Kyoto and Tokyo where you can
-            dress up before our session. This is especially popular and adds a beautiful
-            traditional touch to your photos. Rental costs are separate and typically ¥4,000–¥8,000.
-          </p>
+          <summary>
+            <span data-lang="en">Do you provide props or kimono?</span>
+            <span data-lang="ja" hidden>着物などの衣装は用意してもらえますか？</span>
+          </summary>
+          <p data-lang="en">I can connect you with trusted kimono rental shops in Asakusa where you can dress up before our session. Rental costs are separate (typically ¥4,000–¥8,000) and add a beautiful traditional touch to your Tokyo photos.</p>
+          <p data-lang="ja" hidden>浅草の信頼できる着物レンタルショップをご紹介します。撮影前にレンタルして、本格的な和の雰囲気で撮影できます。レンタル費用は別途（目安¥4,000〜¥8,000）です。</p>
         </details>
 
         <details class="faq-item fade-up delay-4">
-          <summary>Can I use the photos for commercial purposes?</summary>
-          <p>
-            Personal use (social media, printing, sharing with friends and family) is fully included.
-            For commercial licensing, please mention this in your booking request and we can discuss
-            appropriate terms.
-          </p>
-        </details>
-
-        <details class="faq-item fade-up">
-          <summary>How are the photos delivered?</summary>
-          <p>
-            All edited photos are delivered via a private, password-protected online gallery
-            (Google Drive or WeTransfer) within <strong>48 hours</strong> of your session.
-            Files are full-resolution JPEGs — print-quality and Instagram-ready.
-          </p>
+          <summary>
+            <span data-lang="en">How are the photos delivered?</span>
+            <span data-lang="ja" hidden>写真はどのように受け取れますか？</span>
+          </summary>
+          <p data-lang="en">All edited photos are delivered via a private online gallery (Google Drive or WeTransfer) within <strong>48 hours</strong> of your session. Full-resolution JPEGs — print-quality and social media-ready.</p>
+          <p data-lang="ja" hidden>撮影後<strong>48時間以内</strong>に、プライベートオンラインギャラリー（Google DriveまたはWeTransfer）でお届けします。フル解像度JPEGで、印刷にもSNSにも対応。</p>
         </details>
 
       </div>
-
     </div>
   </section>
 
-  <!-- FAQ Styles (scoped here since they're only on this page) -->
   <style>
-  .faq-item {
-    border-bottom: 1px solid var(--border);
-    padding: 0;
-  }
+  .faq-item { border-bottom: 1px solid var(--border); }
   .faq-item summary {
     font-family: var(--ff-head);
     font-size: 1.05rem;
@@ -301,7 +403,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    color: var(--text);
     transition: color .25s;
   }
   .faq-item summary::after {
@@ -314,12 +415,7 @@
   }
   .faq-item[open] summary::after { transform: rotate(45deg); }
   .faq-item summary:hover { color: var(--accent); }
-  .faq-item p {
-    font-size: .9rem;
-    color: var(--text-mid);
-    line-height: 1.85;
-    padding-bottom: 20px;
-  }
+  .faq-item p { font-size: .9rem; color: var(--text-mid); line-height: 1.85; padding-bottom: 20px; }
   .faq-item summary::-webkit-details-marker { display: none; }
   </style>
 
@@ -329,35 +425,36 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo" style="margin-bottom:16px;">
-            <span class="logo-kanji">光</span>
+            <span class="logo-kanji">明暗</span>
             <div class="logo-text">
-              <span class="logo-en">HIKARI Photography</span>
-              <span class="logo-tagline">Japan Travel Photography</span>
+              <span class="logo-en">MEIAN Photography</span>
+              <span class="logo-tagline">Tokyo Travel Photography</span>
             </div>
           </div>
-          <p>Helping travelers from around the world create lasting memories across Japan's most iconic and hidden-gem locations.</p>
+          <p data-lang="en">Helping travelers from around the world create lasting memories across Tokyo's most iconic and hidden-gem locations.</p>
+          <p data-lang="ja" hidden>世界中の旅行者が東京の名所や穴場で、一生残る思い出を作れるよう、サポートしています。</p>
         </div>
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4><span data-lang="en">Navigate</span><span data-lang="ja" hidden>ページ</span></h4>
           <ul>
-            <li><a href="index.html">→ Home</a></li>
-            <li><a href="about.html">→ About</a></li>
-            <li><a href="gallery.html">→ Gallery</a></li>
-            <li><a href="contact.html">→ Contact &amp; Booking</a></li>
+            <li><a href="index.html">→ <span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a></li>
+            <li><a href="about.html">→ <span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a></li>
+            <li><a href="gallery.html">→ <span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a></li>
+            <li><a href="contact.html">→ <span data-lang="en">Contact &amp; Booking</span><span data-lang="ja" hidden>予約・お問い合わせ</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Get In Touch</h4>
+          <h4><span data-lang="en">Get In Touch</span><span data-lang="ja" hidden>お問い合わせ</span></h4>
           <ul>
-            <li><a href="mailto:yuki@hikari-photo.jp">✉ yuki@hikari-photo.jp</a></li>
-            <li><a href="#">📷 @hikari_photo_jp</a></li>
-            <li><a href="#">LINE: hikari_photo</a></li>
-            <li><a href="#">📍 Tokyo / Kyoto</a></li>
+            <li><a href="mailto:yuki@meian-photo.jp">✉ yuki@meian-photo.jp</a></li>
+            <li><a href="#">📷 @meian_photo_jp</a></li>
+            <li><a href="#">LINE: meian_photo</a></li>
+            <li><a href="#">📍 Tokyo, Japan</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bar">
-        <span>© 2026 HIKARI Photography · Yuki Tanaka · All rights reserved.</span>
+        <span>© 2026 MEIAN Photography · Yuki Tanaka · All rights reserved.</span>
         <div class="social-links">
           <a href="#" aria-label="Instagram">📷</a>
           <a href="#" aria-label="Facebook">f</a>
@@ -368,5 +465,18 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    /* Sync placeholder text with language */
+    function syncPlaceholders() {
+      document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+        el.placeholder = currentLang === 'ja'
+          ? el.dataset.placeholderJa
+          : el.dataset.placeholderEn;
+      });
+    }
+    const origToggle = window.toggleLang;
+    window.toggleLang = function() { origToggle(); syncPlaceholders(); };
+    syncPlaceholders();
+  </script>
 </body>
 </html>

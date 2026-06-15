@@ -1,11 +1,28 @@
-/* HIKARI Photography — Main JS */
+/* MEIAN Photography — Main JS */
+
+/* ── i18n ── */
+const LANG_KEY = 'meian_lang';
+let currentLang = localStorage.getItem(LANG_KEY) || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.hidden = el.dataset.lang !== lang;
+  });
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+function toggleLang() {
+  applyLang(currentLang === 'en' ? 'ja' : 'en');
+}
+
+applyLang(currentLang);
 
 /* ── Navbar scroll effect ── */
 const navbar = document.querySelector('.navbar');
 if (navbar) {
-  const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  };
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
@@ -59,12 +76,7 @@ if (filterBtns.length) {
       btn.classList.add('active');
       const cat = btn.dataset.cat;
       galleryItems.forEach(item => {
-        const match = cat === 'all' || item.dataset.cat === cat;
-        item.style.display = match ? '' : 'none';
-        if (match) item.style.animation = 'none';
-        requestAnimationFrame(() => {
-          if (match) item.style.animation = '';
-        });
+        item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
       });
     });
   });
@@ -83,20 +95,12 @@ if (lightbox) {
   const open = idx => {
     lbIdx = idx;
     const item = lbItems[idx];
-    const photo = item.querySelector('.gallery-photo');
-    const cat   = item.dataset.cat || '';
-    const ttl   = item.dataset.title || '';
-    const cls   = item.dataset.ph || '';
+    const cat  = item.dataset.cat || '';
+    const ttl  = item.dataset.title || '';
+    const cls  = item.dataset.ph || '';
     if (lbPhoto) {
       lbPhoto.className = 'photo-inner ' + cls;
-      const icon = lbPhoto.querySelector('.photo-icon') || document.createElement('span');
-      icon.className = 'photo-icon';
-      icon.textContent = '📷';
-      const txt = lbPhoto.querySelector('.ph-label') || document.createElement('span');
-      txt.className = 'ph-label';
-      txt.textContent = ttl;
-      if (!lbPhoto.querySelector('.photo-icon')) lbPhoto.appendChild(icon);
-      if (!lbPhoto.querySelector('.ph-label'))   lbPhoto.appendChild(txt);
+      lbPhoto.innerHTML = `<span class="photo-icon">📷</span><span>${ttl}</span>`;
     }
     if (lbCat) lbCat.textContent = cat;
     if (lbTtl) lbTtl.textContent = ttl;
@@ -110,24 +114,17 @@ if (lightbox) {
   };
 
   lbItems.forEach((item, i) => item.addEventListener('click', () => open(i)));
-
   document.querySelector('.lb-close')?.addEventListener('click', close);
   document.querySelector('.lb-prev')?.addEventListener('click', () =>
-    open((lbIdx - 1 + lbItems.length) % lbItems.length)
-  );
+    open((lbIdx - 1 + lbItems.length) % lbItems.length));
   document.querySelector('.lb-next')?.addEventListener('click', () =>
-    open((lbIdx + 1) % lbItems.length)
-  );
-
-  lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) close();
-  });
-
+    open((lbIdx + 1) % lbItems.length));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
   document.addEventListener('keydown', e => {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape')      close();
-    if (e.key === 'ArrowLeft')   open((lbIdx - 1 + lbItems.length) % lbItems.length);
-    if (e.key === 'ArrowRight')  open((lbIdx + 1) % lbItems.length);
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  open((lbIdx - 1 + lbItems.length) % lbItems.length);
+    if (e.key === 'ArrowRight') open((lbIdx + 1) % lbItems.length);
   });
 }
 
@@ -143,26 +140,20 @@ if (contactForm) {
     group.classList.toggle('error', !ok);
     return ok;
   };
-
   contactForm.querySelectorAll('[required]').forEach(f => {
     f.addEventListener('blur', () => validate(f));
     f.addEventListener('input', () => {
       if (f.closest('.form-group')?.classList.contains('error')) validate(f);
     });
   });
-
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
     let allOk = true;
-    contactForm.querySelectorAll('[required]').forEach(f => {
-      if (!validate(f)) allOk = false;
-    });
+    contactForm.querySelectorAll('[required]').forEach(f => { if (!validate(f)) allOk = false; });
     if (!allOk) return;
-
     const btn = contactForm.querySelector('[type="submit"]');
     btn.textContent = 'Sending…';
     btn.disabled = true;
-
     setTimeout(() => {
       contactForm.style.display = 'none';
       document.querySelector('.form-success')?.classList.add('show');
@@ -170,11 +161,10 @@ if (contactForm) {
   });
 }
 
-/* ── Hero parallax (subtle) ── */
+/* ── Hero parallax ── */
 const heroBg = document.querySelector('.hero-pattern');
 if (heroBg) {
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    heroBg.style.transform = `translateY(${y * 0.25}px)`;
+    heroBg.style.transform = `translateY(${window.scrollY * 0.25}px)`;
   }, { passive: true });
 }

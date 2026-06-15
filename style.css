@@ -437,6 +437,21 @@ h1,h2,h3,h4 { font-family: var(--ff-head); font-weight: 400; line-height: 1.2; }
 .fade-up.delay-3 { transition-delay: .3s; }
 .fade-up.delay-4 { transition-delay: .4s; }
 
+/* ── Language toggle button ── */
+.lang-btn {
+  font-family: var(--ff-jp);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.22);
+  color: rgba(247,240,230,.6);
+  padding: 5px 13px;
+  cursor: pointer;
+  transition: all var(--tr);
+  flex-shrink: 0;
+}
+.lang-btn:hover { border-color: var(--gold); color: var(--gold); }
+
 /* ── Sakura decoration ── */
 .sakura-corner {
   position: absolute;

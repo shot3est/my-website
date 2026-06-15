@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HIKARI Photography — Authentic Japan Moments</title>
-  <meta name="description" content="Professional travel photography service for tourists in Japan. Capture unforgettable moments at Tokyo, Kyoto, and beyond.">
+  <title>MEIAN Photography — Tokyo Travel Photography</title>
+  <meta name="description" content="Professional travel photography service in Tokyo. Capture your unforgettable moments at Asakusa, Shibuya, Shinjuku and beyond.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,17 +13,26 @@
   <nav class="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-kanji">光</span>
+        <span class="logo-kanji">明暗</span>
         <div class="logo-text">
-          <span class="logo-en">HIKARI</span>
-          <span class="logo-tagline">Photography · Japan</span>
+          <span class="logo-en">MEIAN</span>
+          <span class="logo-tagline">Photography · Tokyo</span>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+        <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a></li>
+        <li><a href="about.html"><span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a></li>
+        <li><a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a></li>
+        <li>
+          <button class="lang-btn" onclick="toggleLang()">
+            <span data-lang="en">日本語</span>
+            <span data-lang="ja" hidden>English</span>
+          </button>
+        </li>
+        <li><a href="contact.html" class="nav-cta">
+          <span data-lang="en">Book a Session</span>
+          <span data-lang="ja" hidden>撮影を予約する</span>
+        </a></li>
       </ul>
       <button class="nav-burger" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -33,10 +42,14 @@
 
   <!-- Mobile nav -->
   <nav class="nav-mobile">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Book a Session</a>
+    <a href="index.html"><span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a>
+    <a href="about.html"><span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a>
+    <a href="gallery.html"><span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a>
+    <a href="contact.html"><span data-lang="en">Book a Session</span><span data-lang="ja" hidden>撮影を予約する</span></a>
+    <a href="#" onclick="toggleLang(); return false;" style="color:var(--gold-l);">
+      <span data-lang="en">🌐 日本語に切り替える</span>
+      <span data-lang="ja" hidden>🌐 Switch to English</span>
+    </a>
   </nav>
 
   <!-- ══ HERO ══ -->
@@ -47,28 +60,43 @@
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span></span>
-        Tokyo · Kyoto · Osaka · Hakone
+        <span data-lang="en">Asakusa · Shibuya · Shinjuku · Harajuku</span>
+        <span data-lang="ja" hidden>浅草・渋谷・新宿・原宿</span>
         <span></span>
       </div>
-      <h1 class="hero-title">
-        Your Japan,<br>
-        <em>Beautifully Told.</em>
-      </h1>
-      <p class="hero-jp">日本の美しい瞬間を、永遠に</p>
-      <p class="hero-desc">
-        Professional travel photography for tourists across Japan.
-        From cherry blossoms in Kyoto to the neon glow of Tokyo—
-        let me capture the real magic of your journey.
+      <div data-lang="en">
+        <h1 class="hero-title">Your Tokyo,<br><em>Beautifully Told.</em></h1>
+      </div>
+      <div data-lang="ja" hidden>
+        <h1 class="hero-title">あなたの東京を、<br><em>美しく残す。</em></h1>
+      </div>
+      <p class="hero-jp">光と影が織りなす、東京の物語</p>
+      <p class="hero-desc" data-lang="en">
+        Professional travel photography for tourists in Tokyo.
+        From the ancient temples of Asakusa to the neon-lit streets of Shibuya —
+        let me capture the magic of your journey.
+      </p>
+      <p class="hero-desc" data-lang="ja" hidden>
+        東京を訪れる旅行者のための、プロフォトグラファーサービス。
+        浅草の歴史ある寺院から渋谷のネオン輝く街並みまで、
+        あなただけの東京を永遠に残します。
       </p>
       <div class="hero-btns">
-        <a href="gallery.html" class="btn btn-primary">View Gallery</a>
-        <a href="contact.html" class="btn btn-outline">Book a Session</a>
+        <a href="gallery.html" class="btn btn-primary">
+          <span data-lang="en">View Gallery</span>
+          <span data-lang="ja" hidden>ギャラリーを見る</span>
+        </a>
+        <a href="contact.html" class="btn btn-outline">
+          <span data-lang="en">Book a Session</span>
+          <span data-lang="ja" hidden>撮影を予約する</span>
+        </a>
       </div>
     </div>
-    <p class="hero-vert">光 · 瞬間 · 記憶 · 美</p>
+    <p class="hero-vert">明暗 · 瞬間 · 記憶 · 美</p>
     <div class="hero-scroll">
       <div class="hero-scroll-line"></div>
-      Scroll
+      <span data-lang="en">Scroll</span>
+      <span data-lang="ja" hidden>スクロール</span>
     </div>
   </section>
 
@@ -76,11 +104,19 @@
   <section class="section">
     <div class="container">
       <div class="text-center fade-up">
-        <div class="section-label">What I Offer</div>
-        <h2 class="section-title">Photography <span>Packages</span></h2>
-        <p class="section-sub">
-          Tailored sessions for every kind of traveler — solo explorers, couples,
-          families, and groups.
+        <div class="section-label">
+          <span data-lang="en">What I Offer</span>
+          <span data-lang="ja" hidden>サービス内容</span>
+        </div>
+        <h2 class="section-title">
+          <span data-lang="en">Photography <span>Packages</span></span>
+          <span data-lang="ja" hidden>撮影<span>プラン</span></span>
+        </h2>
+        <p class="section-sub" data-lang="en">
+          Tailored sessions for every kind of traveler — solo explorers, couples, families, and groups.
+        </p>
+        <p class="section-sub" data-lang="ja" hidden>
+          おひとり様からグループまで、すべての旅行者に合わせた撮影プランをご用意しています。
         </p>
       </div>
       <div class="services-grid" style="margin-top:48px;">
@@ -88,28 +124,31 @@
         <div class="service-card fade-up delay-1">
           <span class="service-icon">🌸</span>
           <div class="service-num">01</div>
-          <h3>Solo Portrait</h3>
+          <h3><span data-lang="en">Solo Portrait</span><span data-lang="ja" hidden>ひとり旅撮影</span></h3>
           <span class="jp-sub">一人旅</span>
-          <p>A 2-hour session at iconic Japanese landmarks. 30+ edited photos delivered within 48 hours. Perfect for Instagram-ready memories.</p>
-          <div class="jp-divider" style="margin:20px 0 0;"><span>¥18,000</span></div>
+          <p data-lang="en">A 2-hour session at iconic Tokyo landmarks. 30+ edited photos delivered within 48 hours. Perfect for Instagram-ready memories.</p>
+          <p data-lang="ja" hidden>東京の名所で2時間の撮影。48時間以内に30枚以上の編集済み写真をお届けします。SNS映えする思い出づくりに。</p>
+          <div class="jp-divider" style="margin:20px 0 0;"><span>¥16,000</span></div>
         </div>
 
         <div class="service-card fade-up delay-2">
           <span class="service-icon">⛩</span>
           <div class="service-num">02</div>
-          <h3>Couples &amp; Friends</h3>
+          <h3><span data-lang="en">Couples &amp; Friends</span><span data-lang="ja" hidden>ふたり・友人撮影</span></h3>
           <span class="jp-sub">二人旅・友人旅</span>
-          <p>3-hour session across 2 locations. 60+ edited photos. Includes kimono coordination at Kyoto and golden-hour shooting options.</p>
-          <div class="jp-divider" style="margin:20px 0 0;"><span>¥28,000</span></div>
+          <p data-lang="en">3-hour session across 2 Tokyo locations. 60+ edited photos. Includes kimono coordination and golden-hour shooting options.</p>
+          <p data-lang="ja" hidden>東京の2か所で3時間の撮影。60枚以上の編集済み写真をお届け。着物コーディネートやゴールデンアワー撮影も対応します。</p>
+          <div class="jp-divider" style="margin:20px 0 0;"><span>¥26,000</span></div>
         </div>
 
         <div class="service-card fade-up delay-3">
-          <span class="service-icon">🗾</span>
+          <span class="service-icon">🗼</span>
           <div class="service-num">03</div>
-          <h3>Full Day Journey</h3>
+          <h3><span data-lang="en">Full Day Journey</span><span data-lang="ja" hidden>一日撮影プラン</span></h3>
           <span class="jp-sub">一日撮影</span>
-          <p>6-hour immersive session across multiple locations. 120+ edited photos + video clips. Your entire Japan story in one day.</p>
-          <div class="jp-divider" style="margin:20px 0 0;"><span>¥58,000</span></div>
+          <p data-lang="en">6-hour immersive session across multiple Tokyo locations. 120+ edited photos + video clips. Your entire Tokyo story in one day.</p>
+          <p data-lang="ja" hidden>東京の複数スポットで6時間の撮影。120枚以上の写真と動画クリップをお届け。あなたの東京の物語を一日で。</p>
+          <div class="jp-divider" style="margin:20px 0 0;"><span>¥56,000</span></div>
         </div>
 
       </div>
@@ -119,47 +158,39 @@
   <!-- ══ PHOTO STRIP ══ -->
   <div class="photo-strip">
     <div class="strip-item">
-      <div class="strip-photo ph-fushimi photo-wrap" style="height:100%;">
-        <div class="photo-inner">
-          <span class="photo-icon">⛩</span>
-        </div>
+      <div class="strip-photo ph-asakusa photo-wrap" style="height:100%;">
+        <div class="photo-inner"><span class="photo-icon">🏮</span></div>
       </div>
       <div class="strip-caption">
-        <span>Kyoto</span>
-        <p>Fushimi Inari</p>
+        <span data-lang="en">Asakusa</span><span data-lang="ja" hidden>浅草</span>
+        <p><span data-lang="en">Senso-ji Temple</span><span data-lang="ja" hidden>浅草寺</span></p>
       </div>
     </div>
     <div class="strip-item">
-      <div class="strip-photo ph-asakusa photo-wrap" style="height:100%;">
-        <div class="photo-inner">
-          <span class="photo-icon">🏮</span>
-        </div>
+      <div class="strip-photo ph-tokyo photo-wrap" style="height:100%;">
+        <div class="photo-inner"><span class="photo-icon">🚶</span></div>
       </div>
       <div class="strip-caption">
-        <span>Tokyo</span>
-        <p>Asakusa Temple</p>
+        <span data-lang="en">Shibuya</span><span data-lang="ja" hidden>渋谷</span>
+        <p><span data-lang="en">Scramble Crossing</span><span data-lang="ja" hidden>スクランブル交差点</span></p>
       </div>
     </div>
     <div class="strip-item">
       <div class="strip-photo ph-sakura photo-wrap" style="height:100%;">
-        <div class="photo-inner">
-          <span class="photo-icon">🌸</span>
-        </div>
+        <div class="photo-inner"><span class="photo-icon">🌸</span></div>
       </div>
       <div class="strip-caption">
-        <span>Spring</span>
-        <p>Cherry Blossom</p>
+        <span data-lang="en">Ueno</span><span data-lang="ja" hidden>上野</span>
+        <p><span data-lang="en">Cherry Blossom Season</span><span data-lang="ja" hidden>桜の季節</span></p>
       </div>
     </div>
     <div class="strip-item">
-      <div class="strip-photo ph-fuji photo-wrap" style="height:100%;">
-        <div class="photo-inner">
-          <span class="photo-icon">🗻</span>
-        </div>
+      <div class="strip-photo ph-night photo-wrap" style="height:100%;">
+        <div class="photo-inner"><span class="photo-icon">🌃</span></div>
       </div>
       <div class="strip-caption">
-        <span>Hakone</span>
-        <p>Mt. Fuji View</p>
+        <span data-lang="en">Shinjuku</span><span data-lang="ja" hidden>新宿</span>
+        <p><span data-lang="en">Tokyo After Dark</span><span data-lang="ja" hidden>夜の東京</span></p>
       </div>
     </div>
   </div>
@@ -168,15 +199,22 @@
   <section class="section section-dark">
     <div class="container">
       <div class="text-center fade-up">
-        <div class="section-label">Client Stories</div>
-        <h2 class="section-title" style="color:var(--text-light);">What Travelers <span>Say</span></h2>
+        <div class="section-label">
+          <span data-lang="en">Client Stories</span>
+          <span data-lang="ja" hidden>お客様の声</span>
+        </div>
+        <h2 class="section-title" style="color:var(--text-light);">
+          <span data-lang="en">What Travelers <span>Say</span></span>
+          <span data-lang="ja" hidden>旅人からの<span>メッセージ</span></span>
+        </h2>
       </div>
       <div class="testimonials-grid" style="margin-top:48px;">
 
         <div class="testimonial-card fade-up delay-1">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "Yuki made us feel completely at ease. The photos from our Kyoto session are absolutely stunning — we use them as our phone wallpapers!"
+            "Yuki made us feel completely at ease. The photos from our Asakusa session
+            are absolutely stunning — we use them as our phone wallpapers!"
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">S</div>
@@ -190,7 +228,9 @@
         <div class="testimonial-card fade-up delay-2">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "I was traveling solo and nervous about asking someone to take photos. Yuki made the whole experience so natural. The shots at Fushimi Inari at sunrise were magical!"
+            "I was traveling solo and nervous about asking someone to take photos.
+            Yuki made the whole experience so natural. The shots at Senso-ji at sunrise
+            were magical!"
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">M</div>
@@ -204,7 +244,8 @@
         <div class="testimonial-card fade-up delay-3">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "Our family trip to Japan would not have been the same without these photos. Yuki knew all the hidden spots and the kids loved the whole adventure!"
+            "Our family trip to Tokyo would not have been the same without these photos.
+            Yuki knew all the hidden spots and the kids loved the whole adventure!"
           </p>
           <div class="testimonial-author">
             <div class="author-avatar">K</div>
@@ -224,11 +265,20 @@
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text fade-up">
-          <h2>Ready to capture your<br>Japan moment?</h2>
-          <p>Sessions available in Tokyo, Kyoto, Osaka, Nara &amp; Hakone.</p>
+          <h2>
+            <span data-lang="en">Ready to capture your<br>Tokyo moment?</span>
+            <span data-lang="ja" hidden>あなたの東京の思い出を<br>残しませんか？</span>
+          </h2>
+          <p>
+            <span data-lang="en">Sessions available in Asakusa, Shibuya, Shinjuku, Harajuku &amp; Ueno.</span>
+            <span data-lang="ja" hidden>浅草・渋谷・新宿・原宿・上野での撮影に対応しています。</span>
+          </p>
         </div>
         <div class="fade-up delay-2">
-          <a href="contact.html" class="btn btn-outline">Book Your Session →</a>
+          <a href="contact.html" class="btn btn-outline">
+            <span data-lang="en">Book Your Session →</span>
+            <span data-lang="ja" hidden>撮影を予約する →</span>
+          </a>
         </div>
       </div>
     </div>
@@ -240,35 +290,36 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo" style="margin-bottom:16px;">
-            <span class="logo-kanji">光</span>
+            <span class="logo-kanji">明暗</span>
             <div class="logo-text">
-              <span class="logo-en">HIKARI Photography</span>
-              <span class="logo-tagline">Japan Travel Photography</span>
+              <span class="logo-en">MEIAN Photography</span>
+              <span class="logo-tagline">Tokyo Travel Photography</span>
             </div>
           </div>
-          <p>Helping travelers from around the world create lasting memories across Japan's most iconic and hidden-gem locations.</p>
+          <p data-lang="en">Helping travelers from around the world create lasting memories across Tokyo's most iconic and hidden-gem locations.</p>
+          <p data-lang="ja" hidden>世界中の旅行者が東京の名所や穴場で、一生残る思い出を作れるよう、サポートしています。</p>
         </div>
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4><span data-lang="en">Navigate</span><span data-lang="ja" hidden>ページ</span></h4>
           <ul>
-            <li><a href="index.html">→ Home</a></li>
-            <li><a href="about.html">→ About</a></li>
-            <li><a href="gallery.html">→ Gallery</a></li>
-            <li><a href="contact.html">→ Contact &amp; Booking</a></li>
+            <li><a href="index.html">→ <span data-lang="en">Home</span><span data-lang="ja" hidden>ホーム</span></a></li>
+            <li><a href="about.html">→ <span data-lang="en">About</span><span data-lang="ja" hidden>プロフィール</span></a></li>
+            <li><a href="gallery.html">→ <span data-lang="en">Gallery</span><span data-lang="ja" hidden>ギャラリー</span></a></li>
+            <li><a href="contact.html">→ <span data-lang="en">Contact &amp; Booking</span><span data-lang="ja" hidden>予約・お問い合わせ</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Get In Touch</h4>
+          <h4><span data-lang="en">Get In Touch</span><span data-lang="ja" hidden>お問い合わせ</span></h4>
           <ul>
-            <li><a href="mailto:yuki@hikari-photo.jp">✉ yuki@hikari-photo.jp</a></li>
-            <li><a href="#">📷 @hikari_photo_jp</a></li>
-            <li><a href="#">LINE: hikari_photo</a></li>
-            <li><a href="#">📍 Tokyo / Kyoto</a></li>
+            <li><a href="mailto:yuki@meian-photo.jp">✉ yuki@meian-photo.jp</a></li>
+            <li><a href="#">📷 @meian_photo_jp</a></li>
+            <li><a href="#">LINE: meian_photo</a></li>
+            <li><a href="#">📍 Tokyo, Japan</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bar">
-        <span>© 2026 HIKARI Photography · Yuki Tanaka · All rights reserved.</span>
+        <span>© 2026 MEIAN Photography · Yuki Tanaka · All rights reserved.</span>
         <div class="social-links">
           <a href="#" aria-label="Instagram">📷</a>
           <a href="#" aria-label="Facebook">f</a>
