@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Booking — HIKARI Photography</title>
+  <meta name="description" content="Book a professional photography session in Japan with Yuki Tanaka. Available in Tokyo, Kyoto, Osaka, Nara, and Hakone.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-kanji">光</span>
+        <div class="logo-text">
+          <span class="logo-en">HIKARI</span>
+          <span class="logo-tagline">Photography · Japan</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Book a Session</a>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <section class="page-hero" style="margin-top:var(--nav-h);">
+    <div class="page-hero-bg ph-asakusa" style="opacity:.4;"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">Get in touch</p>
+      <h1 class="page-hero-title">
+        Book a Session
+        <small>撮影のご予約</small>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="contact-layout">
+
+        <!-- ── Left: Info ── -->
+        <div class="contact-info-block fade-up">
+          <div class="section-label">Let's Connect</div>
+          <h2>Plan Your Perfect<br>Photo Session</h2>
+          <span class="jp-sub">ご予約・お問い合わせ</span>
+          <p>
+            Fill in the form with your travel dates, preferred location, and what kind
+            of shoot you have in mind. I'll get back to you within <strong>24 hours</strong>
+            to confirm availability and answer any questions.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="detail-icon">✉</div>
+              <div>
+                <div class="detail-label">Email</div>
+                <div class="detail-value">yuki@hikari-photo.jp</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📱</div>
+              <div>
+                <div class="detail-label">LINE (preferred for quick chat)</div>
+                <div class="detail-value">hikari_photo</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📷</div>
+              <div>
+                <div class="detail-label">Instagram</div>
+                <div class="detail-value">@hikari_photo_jp</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📍</div>
+              <div>
+                <div class="detail-label">Base Location</div>
+                <div class="detail-value">Tokyo &amp; Kyoto, Japan</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px;padding:20px 24px;background:var(--bg-section);border-left:3px solid var(--gold);">
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;">
+              <strong style="color:var(--text);">🕐 Response time:</strong><br>
+              I reply within 24 hours on weekdays. For same-week bookings,
+              please contact me via LINE for a faster response.
+            </p>
+          </div>
+
+          <div style="margin-top:24px;padding:20px 24px;background:var(--bg-section);border-left:3px solid var(--matcha);">
+            <p style="font-size:.82rem;color:var(--text-mid);margin:0;line-height:1.85;">
+              <strong style="color:var(--text);">💳 Payment:</strong><br>
+              50% deposit at booking, remainder on the day of the session.
+              Accepted: PayPal, credit card, bank transfer, PayPay.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Right: Form ── -->
+        <div class="fade-up delay-2">
+          <div class="contact-form">
+            <div style="margin-bottom:28px;">
+              <h3 style="font-family:var(--ff-head);font-size:1.5rem;margin-bottom:4px;">Booking Request</h3>
+              <p style="font-size:.82rem;color:var(--text-mid);">All fields marked <span style="color:var(--accent);">*</span> are required.</p>
+            </div>
+
+            <form id="contact-form" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name <span>*</span></label>
+                  <input type="text" id="fname" name="fname" placeholder="Emma" required>
+                  <span class="field-error">Please enter your first name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name <span>*</span></label>
+                  <input type="text" id="lname" name="lname" placeholder="Wilson" required>
+                  <span class="field-error">Please enter your last name.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <span class="field-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">Preferred Date <span>*</span></label>
+                  <input type="date" id="date" name="date" required>
+                  <span class="field-error">Please select a date.</span>
+                </div>
+                <div class="form-group">
+                  <label for="package">Package</label>
+                  <select id="package" name="package">
+                    <option value="">— Select a package —</option>
+                    <option value="solo">Solo Portrait (2h · ¥18,000)</option>
+                    <option value="couple">Couples &amp; Friends (3h · ¥28,000)</option>
+                    <option value="fullday">Full Day Journey (6h · ¥58,000)</option>
+                    <option value="custom">Custom — let's discuss</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Desired Location(s)</label>
+                <input type="text" id="location" name="location" placeholder="e.g. Fushimi Inari, Arashiyama, Gion — Kyoto">
+              </div>
+
+              <div class="form-group">
+                <label for="group">Group Size</label>
+                <select id="group" name="group">
+                  <option value="">— Select —</option>
+                  <option value="1">1 person (solo)</option>
+                  <option value="2">2 people</option>
+                  <option value="3-4">3–4 people</option>
+                  <option value="5+">5 or more</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell me about your vision <span>*</span></label>
+                <textarea id="message" name="message" rows="5"
+                  placeholder="What kind of photos are you hoping for? Any special requests — kimono, sunrise sessions, specific spots? Let me know!" required></textarea>
+                <span class="field-error">Please write a short message.</span>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" id="policy" name="policy">
+                <label for="policy">
+                  I agree that my data will be used to respond to my enquiry and to plan my photography session. I can unsubscribe or request deletion at any time.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+                Send Booking Request →
+              </button>
+
+              <p class="form-note">
+                📷 You'll receive a confirmation email within 24 hours.
+              </p>
+
+            </form>
+
+            <!-- Success state -->
+            <div class="form-success">
+              <div class="success-icon">✨</div>
+              <h3 class="success-title">Message Sent!</h3>
+              <p class="success-jp">ありがとうございます</p>
+              <p class="success-text">
+                Thank you for reaching out! I'll review your request and reply within
+                <strong>24 hours</strong>. I can't wait to capture your Japan memories.
+              </p>
+              <div style="margin-top:28px;">
+                <a href="gallery.html" class="btn btn-dark">Browse Gallery While You Wait</a>
+              </div>
+            </div>
+
+          </div><!-- /contact-form -->
+        </div><!-- /right -->
+
+      </div><!-- /contact-layout -->
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section class="section section-mid">
+    <div class="container" style="max-width:820px;">
+      <div class="text-center fade-up">
+        <div class="section-label">Before You Book</div>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      </div>
+
+      <div style="margin-top:48px;display:flex;flex-direction:column;gap:0;">
+
+        <details class="faq-item fade-up delay-1" open>
+          <summary>How far in advance should I book?</summary>
+          <p>
+            I recommend booking at least <strong>3–5 days</strong> in advance to ensure availability,
+            especially during peak seasons (cherry blossoms in March–April, autumn foliage in
+            November). Last-minute bookings are sometimes possible — contact me via LINE for the
+            fastest response.
+          </p>
+        </details>
+
+        <details class="faq-item fade-up delay-2">
+          <summary>What if the weather is bad?</summary>
+          <p>
+            Japan weather can be unpredictable! Light rain can actually create beautiful, moody
+            shots. However, if conditions are unsafe or you prefer to reschedule, I offer free
+            date changes with at least <strong>24 hours notice</strong>.
+          </p>
+        </details>
+
+        <details class="faq-item fade-up delay-3">
+          <summary>Do you provide props, costumes, or kimono?</summary>
+          <p>
+            I can connect you with trusted kimono rental shops in Kyoto and Tokyo where you can
+            dress up before our session. This is especially popular and adds a beautiful
+            traditional touch to your photos. Rental costs are separate and typically ¥4,000–¥8,000.
+          </p>
+        </details>
+
+        <details class="faq-item fade-up delay-4">
+          <summary>Can I use the photos for commercial purposes?</summary>
+          <p>
+            Personal use (social media, printing, sharing with friends and family) is fully included.
+            For commercial licensing, please mention this in your booking request and we can discuss
+            appropriate terms.
+          </p>
+        </details>
+
+        <details class="faq-item fade-up">
+          <summary>How are the photos delivered?</summary>
+          <p>
+            All edited photos are delivered via a private, password-protected online gallery
+            (Google Drive or WeTransfer) within <strong>48 hours</strong> of your session.
+            Files are full-resolution JPEGs — print-quality and Instagram-ready.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Styles (scoped here since they're only on this page) -->
+  <style>
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+  .faq-item summary {
+    font-family: var(--ff-head);
+    font-size: 1.05rem;
+    padding: 22px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--text);
+    transition: color .25s;
+  }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform .25s;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item summary:hover { color: var(--accent); }
+  .faq-item p {
+    font-size: .9rem;
+    color: var(--text-mid);
+    line-height: 1.85;
+    padding-bottom: 20px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  </style>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:16px;">
+            <span class="logo-kanji">光</span>
+            <div class="logo-text">
+              <span class="logo-en">HIKARI Photography</span>
+              <span class="logo-tagline">Japan Travel Photography</span>
+            </div>
+          </div>
+          <p>Helping travelers from around the world create lasting memories across Japan's most iconic and hidden-gem locations.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">→ Home</a></li>
+            <li><a href="about.html">→ About</a></li>
+            <li><a href="gallery.html">→ Gallery</a></li>
+            <li><a href="contact.html">→ Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="mailto:yuki@hikari-photo.jp">✉ yuki@hikari-photo.jp</a></li>
+            <li><a href="#">📷 @hikari_photo_jp</a></li>
+            <li><a href="#">LINE: hikari_photo</a></li>
+            <li><a href="#">📍 Tokyo / Kyoto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <span>© 2026 HIKARI Photography · Yuki Tanaka · All rights reserved.</span>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="LINE">L</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

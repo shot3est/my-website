@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — HIKARI Photography</title>
+  <meta name="description" content="Browse Yuki Tanaka's travel photography portfolio. Portraits, temples, cherry blossoms, and more across Japan.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-kanji">光</span>
+        <div class="logo-text">
+          <span class="logo-en">HIKARI</span>
+          <span class="logo-tagline">Photography · Japan</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Session</a></li>
+      </ul>
+      <button class="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Book a Session</a>
+  </nav>
+
+  <!-- ══ PAGE HERO ══ -->
+  <section class="page-hero" style="margin-top:var(--nav-h);">
+    <div class="page-hero-bg ph-bamboo" style="opacity:.5;"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-label">Portfolio</p>
+      <h1 class="page-hero-title">
+        Gallery
+        <small>作品集</small>
+      </h1>
+    </div>
+  </section>
+
+  <!-- ══ GALLERY ══ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="text-center fade-up" style="margin-bottom:40px;">
+        <div class="section-label">Photo Collection</div>
+        <h2 class="section-title">Moments Across <span>Japan</span></h2>
+        <p class="section-sub">Click any photo to view full-size. Use the filters to explore by category.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar fade-up delay-1">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="portrait">Portraits</button>
+        <button class="filter-btn" data-cat="temple">Temples &amp; Shrines</button>
+        <button class="filter-btn" data-cat="nature">Nature</button>
+        <button class="filter-btn" data-cat="city">City &amp; Night</button>
+        <button class="filter-btn" data-cat="season">Seasons</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid fade-up delay-2">
+
+        <!-- Row 1 -->
+        <div class="gallery-item wide" data-cat="temple" data-title="Fushimi Inari at Dawn" data-ph="ph-fushimi">
+          <div class="gallery-photo ph-fushimi photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">⛩</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Fushimi Inari · Kyoto</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Temple &amp; Shrine</div>
+            <div class="gallery-ttl">Fushimi Inari at Dawn</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item tall" data-cat="portrait" data-title="Kimono Portrait, Gion" data-ph="ph-kimono">
+          <div class="gallery-photo ph-kimono photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">👘</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Gion · Kyoto</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Portrait</div>
+            <div class="gallery-ttl">Kimono Portrait, Gion</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="gallery-item" data-cat="season" data-title="Cherry Blossom Season" data-ph="ph-sakura">
+          <div class="gallery-photo ph-sakura photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🌸</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Maruyama Park · Spring</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Season</div>
+            <div class="gallery-ttl">Cherry Blossom Season</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="portrait" data-title="Couple at Asakusa" data-ph="ph-couple">
+          <div class="gallery-photo ph-couple photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">💑</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Asakusa · Tokyo</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Portrait</div>
+            <div class="gallery-ttl">Couple at Asakusa</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Arashiyama Bamboo Grove" data-ph="ph-bamboo">
+          <div class="gallery-photo ph-bamboo photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🎍</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Arashiyama · Kyoto</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Nature</div>
+            <div class="gallery-ttl">Arashiyama Bamboo Grove</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="gallery-item" data-cat="city" data-title="Tokyo Night Skyline" data-ph="ph-tokyo">
+          <div class="gallery-photo ph-tokyo photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🌃</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Shibuya · Tokyo</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">City &amp; Night</div>
+            <div class="gallery-ttl">Tokyo Night Skyline</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item wide" data-cat="nature" data-title="Mt. Fuji at Sunrise" data-ph="ph-fuji">
+          <div class="gallery-photo ph-fuji photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🗻</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Hakone · Kanagawa</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Nature</div>
+            <div class="gallery-ttl">Mt. Fuji at Sunrise</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="gallery-item tall" data-cat="temple" data-title="Peaceful Temple Lanterns" data-ph="ph-asakusa">
+          <div class="gallery-photo ph-asakusa photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🏮</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Senso-ji · Tokyo</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Temple &amp; Shrine</div>
+            <div class="gallery-ttl">Peaceful Temple Lanterns</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="season" data-title="Autumn Foliage, Nikko" data-ph="ph-autumn">
+          <div class="gallery-photo ph-autumn photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🍁</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Nikko · Tochigi</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Season</div>
+            <div class="gallery-ttl">Autumn Foliage, Nikko</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="city" data-title="Dotonbori After Rain" data-ph="ph-night">
+          <div class="gallery-photo ph-night photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🎆</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Dotonbori · Osaka</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">City &amp; Night</div>
+            <div class="gallery-ttl">Dotonbori After Rain</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="gallery-item" data-cat="portrait" data-title="Solo Portrait, Bamboo" data-ph="ph-portrait">
+          <div class="gallery-photo ph-portrait photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🧑‍🎨</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Arashiyama · Kyoto</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Portrait</div>
+            <div class="gallery-ttl">Solo Portrait, Bamboo</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="temple" data-title="Torii at Low Tide" data-ph="ph-fushimi">
+          <div class="gallery-photo ph-fushimi photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">⛩</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Miyajima · Hiroshima</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Temple &amp; Shrine</div>
+            <div class="gallery-ttl">Torii at Low Tide</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+        <div class="gallery-item" data-cat="nature" data-title="Old Nakasendo Trail" data-ph="ph-bamboo">
+          <div class="gallery-photo ph-street photo-wrap" style="height:100%;">
+            <div class="photo-inner">
+              <span class="photo-icon">🏡</span>
+              <span style="font-size:.65rem;letter-spacing:.1em;">Magome · Nagano</span>
+            </div>
+          </div>
+          <div class="gallery-overlay">
+            <div class="gallery-cat">Nature</div>
+            <div class="gallery-ttl">Old Nakasendo Trail</div>
+          </div>
+          <div class="gallery-zoom">+</div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+
+      <!-- CTA below gallery -->
+      <div class="text-center" style="margin-top:64px;" class="fade-up">
+        <div class="jp-divider"><span>あなたの物語を</span></div>
+        <h3 style="font-family:var(--ff-head);font-size:1.7rem;margin:16px 0 10px;">
+          Ready to create your own collection?
+        </h3>
+        <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:28px;">
+          Every photo session is unique — let's plan yours together.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Book Your Session</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ LIGHTBOX ══ -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-inner">
+      <button class="lb-close" aria-label="Close">✕</button>
+      <button class="lb-nav lb-prev" aria-label="Previous">‹</button>
+      <button class="lb-nav lb-next" aria-label="Next">›</button>
+      <div class="lightbox-photo">
+        <div class="lb-photo-inner photo-inner" style="height:60vh;width:100%;"></div>
+      </div>
+      <div class="lightbox-caption">
+        <div class="cat"></div>
+        <div class="ttl"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:16px;">
+            <span class="logo-kanji">光</span>
+            <div class="logo-text">
+              <span class="logo-en">HIKARI Photography</span>
+              <span class="logo-tagline">Japan Travel Photography</span>
+            </div>
+          </div>
+          <p>Helping travelers from around the world create lasting memories across Japan's most iconic and hidden-gem locations.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">→ Home</a></li>
+            <li><a href="about.html">→ About</a></li>
+            <li><a href="gallery.html">→ Gallery</a></li>
+            <li><a href="contact.html">→ Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="mailto:yuki@hikari-photo.jp">✉ yuki@hikari-photo.jp</a></li>
+            <li><a href="#">📷 @hikari_photo_jp</a></li>
+            <li><a href="#">LINE: hikari_photo</a></li>
+            <li><a href="#">📍 Tokyo / Kyoto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <span>© 2026 HIKARI Photography · Yuki Tanaka · All rights reserved.</span>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="LINE">L</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
